@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOUMYARANJAN SAHOO- AI & Machine Learning Learner</title>
+    <title>SOUMYARANJAN SAHOO | AI, FinTech & FPGA Developer</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fonts: Inter and Roboto Mono -->
@@ -81,51 +81,7 @@
             50% { opacity: 0; }
         }
 
-        /* --- NEW: Hero Text Glitch Effect --- */
-        .glitch {
-            position: relative;
-            animation: glitch-shake 2.5s infinite linear;
-        }
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-        }
-        .glitch::before {
-            text-shadow: -1px 0 #00aaff;
-            animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
-        }
-        .glitch::after {
-            text-shadow: 1px 0 #ff00c1; /* Magenta for glitch */
-            animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
-        }
-        @keyframes glitch-shake {
-            0%, 100% { transform: skewX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: skewX(0); }
-            20% { transform: skewX(-0.5deg); }
-            40% { transform: skewX(0.5deg); }
-            60% { transform: skewX(-0.5deg); }
-            80% { transform: skewX(0.5deg); }
-        }
-        @keyframes glitch-anim-1 {
-            0%, 10% { clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); }
-            15% { clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%); }
-            /* ... (rest of keyframes) ... */
-            100% { clip-path: polygon(0 80%, 100% 80%, 100% 95%, 0 95%); }
-        }
-        @keyframes glitch-anim-2 {
-            0%, 10% { clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%); }
-            15% { clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%); }
-            /* ... (rest of keyframes) ... */
-            100% { clip-path: polygon(0 10%, 100% 10%, 100% 25%, 0 25%); }
-        }
-
-        /* --- NEW: Animated Section Title Scanline --- */
+        /* --- Animated Section Title Scanline --- */
         .section-title {
             position: relative;
             display: inline-block;
@@ -148,23 +104,11 @@
             transform: scaleX(1);
         }
 
-        /* --- NEW: Terminal Contact Form --- */
+        /* --- Terminal Contact Form --- */
         .terminal-input-wrapper {
             position: relative;
-            padding-left: 0rem; /* Space for the '>' */
+            padding-left: 0rem;
         }
-       /* {.terminal-input-wrapper::before {
-            content: '';
-            position: absolute;
-            left: 0.75rem; 
-            top: 50%;
-            transform: translateY(-50%);
-            color: #00e5ff;
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1rem; 
-            line-height: 1;
-            z-index: 10;
-        } }*/
         .terminal-input {
             background: #0a0a0a;
             border: 1px solid #333;
@@ -177,7 +121,6 @@
             border-color: #00e5ff;
             box-shadow: 0 0 15px 2px rgba(0, 229, 255, 0.2);
         }
-
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -192,16 +135,18 @@
         <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
             <nav class="container mx-auto px-6 flex justify-between items-center max-w-7xl">
                 <!-- Left Side: Logo -->
-                <a href="#" class="text-2xl font-bold gradient-text font-code">SOUMYA'S PORTFOLIO</a>
+                <a href="#" class="text-2xl font-bold gradient-text font-code">SOUMYA.DEV</a>
                 
                 <!-- Right Side: Nav Links (Desktop) -->
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="text-gray-300 hover:text-[#00e5ff] transition-colors">About</a>
                     <a href="#skills" class="text-gray-300 hover:text-[#00e5ff] transition-colors">Skills</a>
+                    <a href="#experience" class="text-gray-300 hover:text-[#00e5ff] transition-colors">Experience</a>
                     <a href="#projects" class="text-gray-300 hover:text-[#00e5ff] transition-colors">Projects</a>
+                    <a href="#achievements" class="text-gray-300 hover:text-[#00e5ff] transition-colors">Honors</a>
                     <a href="#contact" class="text-gray-300 hover:text-[#00e5ff] transition-colors">Contact</a>
                     <a href="https://drive.google.com/file/d/1D6ra9kHsNFYWOZo3g7jKekOIlvLyTfOn/view?usp=sharing" target="_blank" class="bg-[#00e5ff] text-black font-bold py-2 px-5 rounded-full hover:bg-opacity-80 transition-all shadow-lg shadow-[#00e5ff]/20">
-                        View Resume
+                        View CV
                     </a>
                 </div>
                 
@@ -211,14 +156,15 @@
                 </button>
             </nav>
             
-            <!-- Mobile Menu (Hidden by default) -->
+            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden glass-card mx-6 mt-4 rounded-lg shadow-xl">
                 <a href="#about" class="block text-center py-3 text-white hover:text-[#00e5ff] transition-colors">About</a>
                 <a href="#skills" class="block text-center py-3 text-white hover:text-[#00e5ff] transition-colors">Skills</a>
+                <a href="#experience" class="block text-center py-3 text-white hover:text-[#00e5ff] transition-colors">Experience</a>
                 <a href="#projects" class="block text-center py-3 text-white hover:text-[#00e5ff] transition-colors">Projects</a>
                 <a href="#contact" class="block text-center py-3 text-white hover:text-[#00e5ff] transition-colors">Contact</a>
                 <a href="https://drive.google.com/file/d/1D6ra9kHsNFYWOZo3g7jKekOIlvLyTfOn/view?usp=sharing" target="_blank" class="block text-center py-3 mx-6 my-3 bg-[#00e5ff] text-black font-bold rounded-full hover:bg-opacity-80 transition-all">
-                    View Resume
+                    View CV
                 </a>
             </div>
         </header>
@@ -229,14 +175,15 @@
             <section id="home" class="min-h-screen flex items-center justify-center relative text-center px-6">
                 <div class="z-10 reveal-fade-in">
                     <h1 class="text-3xl md:text-4xl lg:text-7xl font-black text-white mb-4">
-                        Hi, I'm <span class="gradient-text glitch" data-text="SOUMYARANJAN  SAHOO">SOUMYARANJAN  SAHOO</span>
+                        Hi, I'm <span class="gradient-text">SOUMYARANJAN SAHOO</span>
                     </h1>
                     <!-- Typewriter Target -->
                     <h2 id="typewriter-target" class="text-2xl md:text-4xl font-bold text-white mb-8 h-16 md:h-12">
-                        <!-- This will be populated by JavaScript -->
+                        <!-- Populated by JS -->
                     </h2>
                     <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-                        I build intelligent systems, analyze complex data, and deliver impactful AI-driven solutions. Welcome to my portfolio.
+                        Bridging the gap between <strong>Hardware</strong>, <strong>AI</strong>, and <strong>FinTech</strong>. 
+                        I build secure, scalable systems and high-precision predictive models.
                     </p>
                     <div class="flex justify-center gap-4 flex-wrap">
                         <a href="#projects" class="bg-[#00e5ff] text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-opacity-80 transition-all shadow-lg shadow-[#00e5ff]/30 transform hover:scale-105">
@@ -256,132 +203,262 @@
                     <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
                         <!-- Left Column: Photo -->
                         <div class="w-full md:w-1/3 reveal-left">
-                        <img src="PROFILE-Photoroom.png" alt="SOUMYARANJAN SAHOO" class="w-64 h-64 md:w-full md:h-auto mx-auto ">
-                    </div>
-                    <!-- Right Column: Text -->
+                            <div class="relative group">
+                                <div class="absolute -inset-1 bg-gradient-to-r from-[#00e5ff] to-[#00aaff] rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                                <img src="https://api.dicebear.com/9.x/micah/svg?seed=Soumya&backgroundColor=1f2937" alt="SOUMYARANJAN SAHOO" class="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-full object-cover border-2 border-[#00e5ff]/30">
+                            </div>
+                        </div>
+                        <!-- Right Column: Text -->
                         <div class="w-full md:w-2/3 text-lg text-gray-300 space-y-5 reveal-right">
-                            <h3 class="text-3xl font-bold text-white">A Little Bit About Me</h3>
+                            <h3 class="text-3xl font-bold text-white">Engineering the Future of Data</h3>
                             <p>
-            Hello! I'm Soumyaranjan, an aspiring <span class="gradient-text font-semibold">Data Analyst</span> currently pursuing a B.Tech in Electronics & Telecommunication Engineering at VSSUT,Burla. My academic background gives me a unique perspective on the intersection of hardware systems and the data they generate.
-        </p>
-        <p>
-            I am highly motivated and detail-oriented, with a strong foundation in data collection, analysis, and visualization. My true passion lies in leveraging machine learning techniques like <span class="font-code text-white">CNNs</span> and <span class="font-code text-white">MLPs</span> to solve complex, real-world problems—especially in challenging domains like <span class="gradient-text font-semibold">healthcare</span> and integrating them into <span class="gradient-text font-semibold"> hardware systems</span>.
-        </p>
-        <p>
-            I am actively seeking internship opportunities where I can apply my technical skills, analytical mindset, and passion for data-driven innovation.
-        </p>
+                                I am an Engineering Undergraduate (B.Tech in ETC) at <span class="text-white font-semibold">VSSUT, Burla</span> (Class of 2027), with a deep passion for <span class="gradient-text font-semibold">FinTech</span> and <span class="gradient-text font-semibold">MedTech</span>.
+                            </p>
+                            <p>
+                                Currently, I am leveraging Machine Learning approaches in the medical field, focusing on high-precision data processing and anomaly detection (e.g., Melanoma and Pneumonia detection). I am also eager to transfer this rigorous analytical skillset to the financial sector to handle large time-series datasets and optimize secure, scalable digital payment solutions.
+                            </p>
+                            <p>
+                                Beyond code, I am a <span class="font-code text-[#00e5ff]">Published Book Chapter Author</span> on FPGA hardware acceleration and a Kaggle Expert.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- 4. Skills Section -->
-            <section id="skills" class="py-24 px-6 bg-[#0a0a0a] bg-opacity-80"> <!-- Slightly transparent for depth -->
+            <section id="skills" class="py-24 px-6 bg-[#0a0a0a] bg-opacity-80">
                 <div class="container mx-auto max-w-7xl">
-                    <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-16 section-title reveal">My Technical Toolkit</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-16 section-title reveal">Technical Toolkit</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <!-- Skill Card 1 -->
                         <div class="glass-card rounded-xl p-6 tech-card-hover reveal-card">
-                            <h3 class="text-2xl font-bold text-white mb-3">Languages & Databases</h3>
-                            <p class="font-code text-gray-300">Python, SQL</p>
+                            <div class="text-[#00e5ff] text-3xl mb-4"><i class="fas fa-code"></i></div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Languages</h3>
+                            <p class="font-code text-gray-300 text-sm leading-relaxed">Python, Java, SQL, Verilog, Dart (Flutter)</p>
                         </div>
                         <!-- Skill Card 2 -->
                         <div class="glass-card rounded-xl p-6 tech-card-hover reveal-card">
-                            <h3 class="text-2xl font-bold text-white mb-3">AI/ML Frameworks</h3>
-                            <p class="font-code text-gray-300">TensorFlow, PyTorch, Scikit-learn, Keras, Pandas, NumPy</p>
+                            <div class="text-[#00e5ff] text-3xl mb-4"><i class="fas fa-brain"></i></div>
+                            <h3 class="text-2xl font-bold text-white mb-3">AI & ML</h3>
+                            <p class="font-code text-gray-300 text-sm leading-relaxed">TensorFlow, Scikit-Learn, OpenCV, EfficientNet, Transfer Learning, Hugging Face</p>
                         </div>
                         <!-- Skill Card 3 -->
                         <div class="glass-card rounded-xl p-6 tech-card-hover reveal-card">
-                            <h3 class="text-2xl font-bold text-white mb-3">Data & MLOps</h3>
-                            <p class="font-code text-gray-300">Hugging space Tableau</p>
+                            <div class="text-[#00e5ff] text-3xl mb-4"><i class="fas fa-microchip"></i></div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Hardware</h3>
+                            <p class="font-code text-gray-300 text-sm leading-relaxed">VLSI Design, FPGA (PolarFire SoC, Xilinx), Embedded Systems</p>
                         </div>
                         <!-- Skill Card 4 -->
                         <div class="glass-card rounded-xl p-6 tech-card-hover reveal-card">
-                            <h3 class="text-2xl font-bold text-white mb-3">Other Skills</h3>
-                            <p class="font-code text-gray-300">Git</p>
+                            <div class="text-[#00e5ff] text-3xl mb-4"><i class="fas fa-server"></i></div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Web & Cloud</h3>
+                            <p class="font-code text-gray-300 text-sm leading-relaxed">Flask (Backend), Nginx, IBM Cloud, REST APIs</p>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <!-- 5. Experience Section (New) -->
+            <section id="experience" class="py-24 px-6">
+                <div class="container mx-auto max-w-5xl">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-16 section-title reveal">Experience</h2>
+                    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-[#00e5ff] before:to-transparent">
+                        
+                        <!-- Experience Item 1 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active reveal-card">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#00e5ff] bg-[#0a0a0a] text-[#00e5ff] shadow-[0_0_10px_#00e5ff] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl tech-card-hover">
+                                <div class="flex justify-between items-center mb-1">
+                                    <h3 class="font-bold text-white text-lg">Research Intern</h3>
+                                    <time class="font-code text-xs text-[#00e5ff]">Dec '25 - Jan '26</time>
+                                </div>
+                                <div class="text-sm font-semibold text-gray-400 mb-2">IIT Hyderabad (Dept. of Civil Engg)</div>
+                                <p class="text-gray-300 text-sm">
+                                    Engineered a regression pipeline (Python/Scikit-Learn) to map geometric parameters of Cold Form Steel to structural yield stress, substituting expensive physical lab testing with data-driven predictive models.
+                                </p>
+                            </div>
+                        </div>
 
-            <!-- 5. Projects Section -->
-            <section id="projects" class="py-24 px-6">
+                        <!-- Experience Item 2 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active reveal-card">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-600 bg-[#0a0a0a] text-gray-400 group-hover:border-[#00e5ff] group-hover:text-[#00e5ff] group-hover:shadow-[0_0_10px_#00e5ff] transition-all shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl tech-card-hover">
+                                <div class="flex justify-between items-center mb-1">
+                                    <h3 class="font-bold text-white text-lg">Data Analytics Intern</h3>
+                                    <time class="font-code text-xs text-[#00e5ff]">Oct '24 - Nov '24</time>
+                                </div>
+                                <div class="text-sm font-semibold text-gray-400 mb-2">Connecting Dreams Foundation (AICTE)</div>
+                                <p class="text-gray-300 text-sm">
+                                    Conducted comprehensive data analysis to evaluate healthcare accessibility trends using Python (Pandas, Matplotlib). Uncovered correlations between income levels and insurance coverage.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Experience Item 3 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active reveal-card">
+                            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-600 bg-[#0a0a0a] text-gray-400 group-hover:border-[#00e5ff] group-hover:text-[#00e5ff] group-hover:shadow-[0_0_10px_#00e5ff] transition-all shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl tech-card-hover">
+                                <div class="flex justify-between items-center mb-1">
+                                    <h3 class="font-bold text-white text-lg">AI & Cloud Intern</h3>
+                                    <time class="font-code text-xs text-[#00e5ff]">June '24 - July '24</time>
+                                </div>
+                                <div class="text-sm font-semibold text-gray-400 mb-2">Eduneet Foundations (AICTE)</div>
+                                <p class="text-gray-300 text-sm">
+                                    Architected "Heleophile," a conversational AI chatbot on IBM Cloud to accelerate solar energy adoption. Engineered logic to calculate installation costs and ROI based on real-time data.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. Projects Section -->
+            <section id="projects" class="py-24 px-6 bg-[#0a0a0a] bg-opacity-80">
                 <div class="container mx-auto max-w-7xl">
                     <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-16 section-title reveal">Featured Projects</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Changed grid to lg:grid-cols-2 for 2x2 layout -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                         
-                        <!-- Project Card 1 -->
-                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card">
+                        <!-- Project Card 1: MedTech (Melanoma) -->
+                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card border-t-4 border-t-[#00e5ff]">
                             <div class="p-6 flex-grow">
-                                <h3 class="text-2xl font-bold text-white mb-2">[YOUR_PROJECT_1_TITLE]</h3>
-                                <p class="text-gray-300 mb-4">[YOUR_PROJECT_1_DESCRIPTION]</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">[TAG1]</span>
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">[TAG2]</span>
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">[TAG3]</span>
+                                <h3 class="text-2xl font-bold text-white mb-2">Multimodal Melanoma Detection</h3>
+                                <p class="text-gray-400 text-sm mb-4">
+                                    A deep learning framework fusing dermoscopic image analysis with patient metadata using EfficientNet-B0. Implemented stratified under-sampling for class imbalance.
+                                </p>
+                                <div class="mb-4">
+                                    <span class="block text-[#00e5ff] font-bold text-sm mb-1">Impact:</span>
+                                    <p class="text-gray-300 text-sm">Achieved <span class="text-white font-bold">95.07% Accuracy</span> & 0.98 AUC on SIIM-ISIC dataset.</p>
                                 </div>
-                            </div>
-                            <div class="p-6 pt-0 flex justify-end gap-4">
-                                <a href="[YOUR_PROJECT_1_GITHUB_LINK]" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-2xl" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="[YOUR_PROJECT_1_DEMO_LINK]" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-2xl" title="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Project Card 2 -->
-                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card">
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-2xl font-bold text-white mb-2">[YOUR_PROJECT_2_TITLE]</h3>
-                                <p class="text-gray-300 mb-4">[YOUR_PROJECT_2_DESCRIPTION]</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">[TAG1]</span>
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">[TAG2]</span>
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">[TAG3]</span>
-                                </div>
-                            </div>
-                            <div class="p-6 pt-0 flex justify-end gap-4">
-                                <a href="[YOUR_PROJECT_2_GITHUB_LINK]" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-2xl" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="[YOUR_PROJECT_2_DEMO_LINK]" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-2xl" title="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Project Card 3 -->
-                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card">
-                            <div class="p-6 flex-grow">
-                                <h3 class="text-2xl font-bold text-white mb-2">PneumoScan AI</h3>
-                                <p class="text-gray-300 mb-4">Al powered chect xray analyzer</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">ann</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Python</span>
                                     <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">TensorFlow</span>
-                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Streamlit</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">MedTech</span>
                                 </div>
                             </div>
                             <div class="p-6 pt-0 flex justify-end gap-4">
-                                <a href="[YOUR_PROJECT_3_GITHUB_LINK]" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-2xl" title="View Code">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://soumya-soumya.github.io/PneumoScan_AI/#analyzer" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-2xl" title="Live Demo">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
+                                <a href="https://github.com/SOUMYA-soumya" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-xl"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-xl"><i class="fas fa-file-medical-alt"></i> Kaggle</a>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2: PneumoScanAI (NEW) -->
+                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card border-t-4 border-t-[#00e5ff]">
+                            <div class="p-6 flex-grow">
+                                <h3 class="text-2xl font-bold text-white mb-2">PneumoScanAI</h3>
+                                <p class="text-gray-400 text-sm mb-4">
+                                    Advanced CNN architecture for Pneumonia Detection in Chest X-Rays. Engineered an automated pipeline with image normalization and extensive data augmentation (rotation, zoom, flips).
+                                </p>
+                                <div class="mb-4">
+                                    <span class="block text-[#00e5ff] font-bold text-sm mb-1">Impact:</span>
+                                    <p class="text-gray-300 text-sm">Achieved state-of-the-art accuracy of <span class="text-white font-bold">97.86%</span> using Adam optimizer.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">CNN</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Computer Vision</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Deep Learning</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0 flex justify-end gap-4">
+                                <a href="https://github.com/SOUMYA-soumya" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-xl"><i class="fab fa-github"></i> Code</a>
+                                <a href="#" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-xl"><i class="fas fa-laptop-medical"></i> Demo</a>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3: FinTech -->
+                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card border-t-4 border-t-[#00aaff]">
+                            <div class="p-6 flex-grow">
+                                <h3 class="text-2xl font-bold text-white mb-2">Udra Finance App</h3>
+                                <p class="text-gray-400 text-sm mb-4">
+                                    A secure FinTech backend developed with Python Flask and a Flutter frontend. Managed virtual environments and token-based authentication for secure transactions.
+                                </p>
+                                <div class="mb-4">
+                                    <span class="block text-[#00e5ff] font-bold text-sm mb-1">Tech Stack:</span>
+                                    <p class="text-gray-300 text-sm">Deployed on Kamatera server using Nginx.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Flask</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Flutter</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">FinTech</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0 flex justify-end gap-4">
+                                <a href="https://github.com/SOUMYA-soumya" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-xl"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 4: Hardware/FPGA -->
+                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card border-t-4 border-t-[#ff00c1]">
+                            <div class="p-6 flex-grow">
+                                <h3 class="text-2xl font-bold text-white mb-2">Real-Time Face Tracking</h3>
+                                <p class="text-gray-400 text-sm mb-4">
+                                    Hardware implementation of a visual tracking pipeline on the Microchip PolarFire SoC Video Kit.
+                                </p>
+                                <div class="mb-4">
+                                    <span class="block text-[#00e5ff] font-bold text-sm mb-1">Highlight:</span>
+                                    <p class="text-gray-300 text-sm">Utilized FPGA fabric for hardware acceleration to achieve real-time video processing frame rates.</p>
+                                </div>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">FPGA</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">PolarFire SoC</span>
+                                    <span class="font-code text-xs bg-[#00e5ff]/20 text-[#00e5ff] py-1 px-3 rounded-full">Edge AI</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0 flex justify-end gap-4">
+                                <a href="https://github.com/SOUMYA-soumya" target="_blank" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-xl"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. Honors & Publications -->
+            <section id="achievements" class="py-24 px-6">
+                <div class="container mx-auto max-w-5xl">
+                    <h2 class="text-4xl md:text-5xl font-bold text-center text-white mb-16 section-title reveal">Honors & Achievements</h2>
+                    <div class="space-y-6">
+                        <!-- Item 1 -->
+                        <div class="glass-card p-6 rounded-xl flex items-start gap-4 reveal-left">
+                            <div class="text-[#ff00c1] text-2xl mt-1"><i class="fas fa-book"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Book Chapter Author</h3>
+                                <p class="text-gray-300">"Methodologies for Implementing Complex AI Models on FPGA Systems" — <em>FPGA for Next Generation IC Design and Autonomous Systems</em> (Upcoming).</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="glass-card p-6 rounded-xl flex items-start gap-4 reveal-right">
+                            <div class="text-[#ffd700] text-2xl mt-1"><i class="fas fa-trophy"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">2nd Prize, Student Poster Contest 2025</h3>
+                                <p class="text-gray-300">Organized by the IEEE Solid-State Circuits Society (SSCS), Kolkata Chapter.</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="glass-card p-6 rounded-xl flex items-start gap-4 reveal-left">
+                            <div class="text-[#00e5ff] text-2xl mt-1"><i class="fas fa-medal"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Kaggle Expert</h3>
+                                <p class="text-gray-300">Recognized for high-performance kernels and consistent contributions to the Medical Image Analysis community.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 6. Contact Section -->
-            <section id="contact" class="py-24 px-6 text-center">
+            <!-- 8. Contact Section -->
+            <section id="contact" class="py-24 px-6 text-center bg-[#0a0a0a] bg-opacity-80">
                 <div class="container mx-auto max-w-3xl">
                     <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 section-title reveal">Get In Touch</h2>
                     <p class="text-lg text-gray-300 mb-10 reveal">
-                        I'm currently open to new opportunities. Whether you have a question, a project proposal, or just want to connect, feel free to reach out.
+                        I'm currently open to new opportunities in AI, FinTech, and Data Science.
                     </p>
                     
                     <!-- Social Icons -->
@@ -395,12 +472,13 @@
                         <a href="mailto:sahoo.soumyaranjan2040@gmail.com" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-4xl">
                             <i class="fas fa-envelope"></i>
                         </a>
+                        <!-- Added Phone Link -->
                         <a href="tel:+917978991136" class="text-gray-400 hover:text-[#00e5ff] transition-colors text-4xl">
                             <i class="fas fa-phone"></i>
                         </a>
                     </div>
                     
-                    <!-- NEW: Terminal Contact Form -->
+                    <!-- Terminal Contact Form -->
                     <div class="glass-card rounded-2xl p-8 text-left reveal">
                         <form action="https://formspree.io/f/mblpqowg" method="POST">
                             <div class="mb-5">
@@ -431,10 +509,10 @@
 
         </main>
 
-        <!-- 7. Footer -->
+        <!-- 9. Footer -->
         <footer class="py-10 text-center border-t border-white/10 mt-20">
-            <p class="text-gray-500">
-                © 2025 SOUMYARANJAN_SAHOO. Built with passion and  &#x2764;&#xFE0F;
+            <p class="text-gray-500 font-code">
+                © 2025 SOUMYARANJAN SAHOO. <br> Built with passion & Python.
             </p>
         </footer>
     
@@ -454,7 +532,6 @@
                 navbar.classList.remove('glass-card');
             }
         };
-        // (Mobile menu script remains the same)
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuBtn.addEventListener('click', () => {
@@ -465,7 +542,6 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-
 
         // --- Standard ScrollReveal Script ---
         const sr = ScrollReveal({
@@ -482,7 +558,7 @@
         sr.reveal('.reveal-right', { origin: 'right' });
         sr.reveal('.reveal-card', { origin: 'bottom', interval: 150 });
         
-        // --- NEW: ScrollReveal Callback for Section Titles ---
+        // --- ScrollReveal Callback for Section Titles ---
         sr.reveal('.section-title', {
             origin: 'bottom',
             distance: '30px',
@@ -495,7 +571,15 @@
         
         // --- Typewriter Effect Script ---
         function setupTypewriter(target) {
-            const strings = ["Data-Driven ","Finance-Focused"," AI-Fueled"," Hungry to Learn, Wired to Build ","ML-Explorer", "Mad for Python", "Tech Innovator"];
+            // UPDATED STRINGS FROM CV
+            const strings = [
+                "FinTech Enthusiast", 
+                "MedTech Innovator", 
+                "FPGA Developer", 
+                "AI Researcher", 
+                "Book Chapter Author",
+                "Kaggle Expert"
+            ];
             let stringIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
@@ -509,19 +593,19 @@
                 if (!isDeleting) {
                     if (charIndex < currentString.length) {
                         charIndex++;
-                        setTimeout(type, 100); // Typing speed
+                        setTimeout(type, 100); 
                     } else {
                         isDeleting = true;
-                        setTimeout(type, 2000); // Pause at end of word
+                        setTimeout(type, 2000); 
                     }
                 } else {
                     if (charIndex > 0) {
                         charIndex--;
-                        setTimeout(type, 50); // Deleting speed
+                        setTimeout(type, 50); 
                     } else {
                         isDeleting = false;
                         stringIndex = (stringIndex + 1) % strings.length;
-                        setTimeout(type, 500); // Pause before typing new word
+                        setTimeout(type, 500); 
                     }
                 }
             }
@@ -530,37 +614,34 @@
         setupTypewriter(document.getElementById('typewriter-target'));
 
 
-        // --- NEW: Interactive 3D Animated Particle Background ---
+        // --- 3D Particle Background (Optimized) ---
         (function() {
-            let scene, camera, renderer;
-            let particles, line;
-            let particleCount = 150;
-            let maxDistance = 120; // Max distance for lines
+            let scene, camera, renderer, particles, line;
+            let particleCount = 300; // Increased count for denser neural net
+            let maxDistance = 100;
             let mouse = new THREE.Vector2(-500, -500);
             let particlePositions, particleVelocities, particleColors;
             
-            // --- NEW: Colors ---
-            const baseColor = new THREE.Color(0xffffff); // Default: white
-            const interactColor = new THREE.Color(0x00e5ff); // Accent: cyan
+            const baseColor = new THREE.Color(0xffffff);
+            const interactColor = new THREE.Color(0x00e5ff);
             const lineBaseColor = new THREE.Color(0xffffff);
             const lineInteractColor = new THREE.Color(0x00e5ff);
 
             function init() {
                 const container = document.getElementById('particles-bg');
-                
                 scene = new THREE.Scene();
                 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
                 camera.position.z = 750;
 
                 renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
                 renderer.setSize(window.innerWidth, window.innerHeight);
-                renderer.setClearColor(0x000000, 0);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio
                 container.appendChild(renderer.domElement);
 
-                // Particle Geometry
+                // Initialize Arrays
                 particlePositions = new Float32Array(particleCount * 3);
                 particleVelocities = new Array(particleCount);
-                particleColors = new Float32Array(particleCount * 3); // NEW
+                particleColors = new Float32Array(particleCount * 3);
                 
                 for (let i = 0; i < particleCount; i++) {
                     const i3 = i * 3;
@@ -573,35 +654,32 @@
                         (Math.random() - 0.5) * 0.5,
                         (Math.random() - 0.5) * 0.5
                     );
-                    
-                    // NEW: Set initial colors
                     baseColor.toArray(particleColors, i3);
                 }
 
                 const particleGeometry = new THREE.BufferGeometry();
                 particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
-                particleGeometry.setAttribute('color', new THREE.BufferAttribute(particleColors, 3)); // NEW
+                particleGeometry.setAttribute('color', new THREE.BufferAttribute(particleColors, 3));
                 
-                // Particle Material & Object
                 const particleMaterial = new THREE.PointsMaterial({
                     size: 3,
                     sizeAttenuation: true,
-                    vertexColors: true // NEW: Use colors from geometry
+                    vertexColors: true
                 });
                 particles = new THREE.Points(particleGeometry, particleMaterial);
                 scene.add(particles);
 
-                // Line Geometry (Plexus)
+                // Line Geometry
                 const lineGeometry = new THREE.BufferGeometry();
                 const linePositions = new Float32Array(particleCount * particleCount * 3);
-                const lineColors = new Float32Array(particleCount * particleCount * 3); // NEW
+                const lineColors = new Float32Array(particleCount * particleCount * 3);
                 lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
-                lineGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3)); // NEW
+                lineGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
                 
                 const lineMaterial = new THREE.LineBasicMaterial({
                     transparent: true,
                     opacity: 0.05,
-                    vertexColors: true // NEW
+                    vertexColors: true
                 });
                 line = new THREE.LineSegments(lineGeometry, lineMaterial);
                 scene.add(line);
@@ -639,43 +717,45 @@
                 for (let i = 0; i < particleCount; i++) {
                     const i3 = i * 3;
                     
-                    // Update velocity & position
-                    particlePositions[i3] += particleVelocities[i].x;
-                    particlePositions[i3 + 1] += particleVelocities[i].y;
-                    particlePositions[i3 + 2] += particleVelocities[i].z;
-
-                    // Boundary check (wrap around)
-                    if (particlePositions[i3] > window.innerWidth / 2) particlePositions[i3] = -window.innerWidth / 2;
-                    if (particlePositions[i3] < -window.innerWidth / 2) particlePositions[i3] = window.innerWidth / 2;
-                    if (particlePositions[i3 + 1] > window.innerHeight / 2) particlePositions[i3 + 1] = -window.innerHeight / 2;
-                    if (particlePositions[i3 + 1] < -window.innerHeight / 2) particlePositions[i3 + 1] = window.innerHeight / 2;
-                    if (particlePositions[i3 + 2] > 250) particlePositions[i3 + 2] = -250;
-                    if (particlePositions[i3 + 2] < -250) particlePositions[i3 + 2] = 250;
-                    
-                    let isInteracting = false;
-                    
-                    // --- Mouse Interaction ---
-                    if (mouse.world) {
-                        const dx = particlePositions[i3] - mouse.world.x;
-                        const dy = particlePositions[i3 + 1] - mouse.world.y;
-                        const dist = Math.sqrt(dx * dx + dy * dy);
-                        const repelForce = Math.max(0, (150 - dist) * 0.01);
+                    // Safety check to ensure particleVelocities[i] exists
+                    if (particleVelocities[i]) {
+                        particlePositions[i3] += particleVelocities[i].x;
+                        particlePositions[i3 + 1] += particleVelocities[i].y;
+                        particlePositions[i3 + 2] += particleVelocities[i].z;
                         
-                        if (repelForce > 0) {
-                            isInteracting = true;
-                            particleVelocities[i].x += (dx / dist) * repelForce;
-                            particleVelocities[i].y += (dy / dist) * repelForce;
+                         // Boundaries
+                        if (particlePositions[i3] > window.innerWidth / 2) particlePositions[i3] = -window.innerWidth / 2;
+                        if (particlePositions[i3] < -window.innerWidth / 2) particlePositions[i3] = window.innerWidth / 2;
+                        if (particlePositions[i3 + 1] > window.innerHeight / 2) particlePositions[i3 + 1] = -window.innerHeight / 2;
+                        if (particlePositions[i3 + 1] < -window.innerHeight / 2) particlePositions[i3 + 1] = window.innerHeight / 2;
+                        if (particlePositions[i3 + 2] > 250) particlePositions[i3 + 2] = -250;
+                        if (particlePositions[i3 + 2] < -250) particlePositions[i3 + 2] = 250;
+                        
+                        let isInteracting = false;
+                        if (mouse.world) {
+                            const dx = particlePositions[i3] - mouse.world.x;
+                            const dy = particlePositions[i3 + 1] - mouse.world.y;
+                            const dist = Math.sqrt(dx * dx + dy * dy);
+                            const repelForce = Math.max(0, (150 - dist) * 0.01);
+                            
+                            if (repelForce > 0) {
+                                isInteracting = true;
+                                particleVelocities[i].x += (dx / dist) * repelForce;
+                                particleVelocities[i].y += (dy / dist) * repelForce;
+                            }
                         }
+
+                        if (isInteracting) {
+                            interactColor.toArray(particleCol, i3);
+                        } else {
+                            baseColor.toArray(particleCol, i3);
+                        }
+                        
+                         particleVelocities[i].multiplyScalar(0.97);
                     }
                     
-                    // --- NEW: Update Particle Color ---
-                    if (isInteracting) {
-                        interactColor.toArray(particleCol, i3);
-                    } else {
-                        baseColor.toArray(particleCol, i3);
-                    }
                     
-                    // --- Plexus (Lines) Logic ---
+                    // Lines
                     for (let j = i + 1; j < particleCount; j++) {
                         const j3 = j * 3;
                         const dx = particlePositions[i3] - particlePositions[j3];
@@ -693,8 +773,16 @@
                             linePos[line_i + 4] = particlePositions[j3 + 1];
                             linePos[line_i + 5] = particlePositions[j3 + 2];
 
-                            // --- NEW: Update Line Color ---
-                            if (isInteracting) {
+                            // Check interaction for line color
+                            let isLineInteracting = false;
+                            if (mouse.world) {
+                                const dxL = particlePositions[i3] - mouse.world.x;
+                                const dyL = particlePositions[i3 + 1] - mouse.world.y;
+                                const distL = Math.sqrt(dxL * dxL + dyL * dyL);
+                                if (distL < 150) isLineInteracting = true;
+                            }
+
+                            if (isLineInteracting) {
                                 lineInteractColor.toArray(lineCol, line_i);
                                 lineInteractColor.toArray(lineCol, line_i + 3);
                             } else {
@@ -704,16 +792,13 @@
                             lineVertexIndex += 2;
                         }
                     }
-                     particleVelocities[i].multiplyScalar(0.97);
+                   
                 }
 
-                // Update geometry
                 particles.geometry.attributes.position.needsUpdate = true;
-                particles.geometry.attributes.color.needsUpdate = true; // NEW
-                
+                particles.geometry.attributes.color.needsUpdate = true;
                 line.geometry.attributes.position.needsUpdate = true;
-                line.geometry.attributes.color.needsUpdate = true; // NEW
-                
+                line.geometry.attributes.color.needsUpdate = true;
                 line.geometry.setDrawRange(0, lineVertexIndex);
 
                 renderer.render(scene, camera);
@@ -726,4 +811,3 @@
 
 </body>
 </html>
-
