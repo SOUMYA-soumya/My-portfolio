@@ -321,31 +321,36 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         
                         <!-- Project Card 1: Melanoma -->
-                        <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card">
+<div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card">
                             <div class="h-40 bg-gradient-to-br from-[#ff00c1]/20 to-black relative flex items-center justify-center border-b border-white/10 group overflow-hidden">
                                 <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20"></div>
                                 <i class="fas fa-microscope text-6xl text-[#ff00c1]/60 group-hover:scale-110 transition-transform duration-500"></i>
                             </div>
                             <div class="p-6 flex-grow flex flex-col">
-                                <h3 class="text-xl font-bold text-white mb-2">Multimodal Melanoma Detection</h3>
-                                <p class="text-gray-400 text-sm mb-4 flex-grow">
-                                    Deep learning framework fusing dermoscopic image analysis with patient metadata using EfficientNet-B0. Implemented two-phase transfer learning and stratified under-sampling.
+                                <h3 class="text-xl font-bold text-white mb-2 leading-tight">Derma-Vision: Wiener Filtering and Artifact Restoration for High-Fidelity ML Prediction</h3>
+                                
+                                <p class="text-gray-400 text-sm mb-4 flex-grow mt-2">
+                                    A core module of the Diagnomass ecosystem. Engineered a Dual-Stream EfficientNet-B7 ensemble fusing raw RGB pixels with offline-computed CTE (Color-Texture-Edge) maps and tabular patient metadata via a custom MLP. Deployed as a full-stack clinical web dashboard.
                                 </p>
+                                
                                 <div class="mb-4">
-                                    <span class="block text-[#ff00c1] font-bold text-xs uppercase tracking-wider mb-1">Impact</span>
-                                    <p class="text-gray-300 text-sm font-semibold">95.07% Accuracy & 0.98 AUC on SIIM-ISIC dataset.</p>
+                                    <span class="block text-[#ff00c1] font-bold text-xs uppercase tracking-wider mb-1">Clinical Impact</span>
+                                    <p class="text-gray-300 text-sm font-semibold">0.9941 Validation AUC & 0.9659 F1-Score via anatomically stratified testing.</p>
                                 </div>
+                                
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="font-code text-xs bg-[#ff00c1]/20 text-[#ff00c1] py-1 px-3 rounded-full">Python</span>
-                                    <span class="font-code text-xs bg-[#ff00c1]/20 text-[#ff00c1] py-1 px-3 rounded-full">TensorFlow</span>
+                                    <span class="font-code text-xs bg-[#ff00c1]/20 text-[#ff00c1] py-1 px-3 rounded-full">PyTorch</span>
+                                    <span class="font-code text-xs bg-[#ff00c1]/20 text-[#ff00c1] py-1 px-3 rounded-full">OpenCV</span>
+                                    <span class="font-code text-xs bg-[#ff00c1]/20 text-[#ff00c1] py-1 px-3 rounded-full">Hugging Face</span>
+                                    <span class="font-code text-xs bg-[#ff00c1]/20 text-[#ff00c1] py-1 px-3 rounded-full">Vercel</span>
                                 </div>
                             </div>
+                            
                             <div class="p-6 pt-0 flex justify-end gap-4 mt-auto border-t border-white/5 pt-4 mx-6">
-                                <a href="https://github.com/SOUMYA-soumya/MELANOMA_DETECTION" target="_blank" class="text-gray-400 hover:text-[#ff00c1] transition-colors text-xl"><i class="fab fa-github"></i> Code</a>
-                                <a href="https://www.kaggle.com/code/soumyaranjansahoo33/melanoma-final" class="text-gray-400 hover:text-[#ff00c1] transition-colors text-xl"><i class="fas fa-file-medical-alt"></i> Kaggle</a>
+                                <a href="https://diagnomass-derma-vision.vercel.app/" target="_blank" class="text-gray-400 hover:text-[#ff00c1] transition-colors text-xl" title="Live Web App"><i class="fas fa-external-link-alt"></i> Demo</a>
+                                <a href="https://github.com/SOUMYA-soumya/Derma_Vision/blob/8324877d80d8f2cf341b3c48795b4153c7a6709c/melanoma-final_ran.ipynb" target="_blank" class="text-gray-400 hover:text-[#ff00c1] transition-colors text-xl" title="GitHub Repository"><i class="fab fa-github"></i> Code</a>
                             </div>
                         </div>
-
                         <!-- Project Card 2: PneumoScanAI -->
                         <div class="glass-card rounded-2xl overflow-hidden flex flex-col tech-card-hover reveal-card">
                             <div class="h-40 bg-gradient-to-br from-[#00e5ff]/20 to-black relative flex items-center justify-center border-b border-white/10 group overflow-hidden">
